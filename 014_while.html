@@ -1,0 +1,23 @@
+<script>
+  // let i = 0
+
+  // while (confirm("Continue?")) {
+  //   alert(`${i+1}.`)
+  //   i++
+  // }
+  
+  let i = 1
+
+  while (true) {
+    let c = confirm("Continue?")
+
+    if (c === true) {
+      alert(`${i}번쨰 반복.`)
+      i++
+      continue
+    } else {
+      break
+    }
+    
+  }
+</script>
