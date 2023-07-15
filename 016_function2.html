@@ -1,0 +1,42 @@
+<script>
+  // const isLeafYear = function (year) {
+  //   if (year % 4 === 0) {
+  //     if (year % 100 === 0) {
+  //       if (year % 400 === 0) {
+  //         return true
+  //       }
+  //       return false
+  //     }
+  //     return true
+  //   }
+  //   else {
+  //     return false
+  //   }
+  // }
+
+  const isLeafYear = function (year) {
+    return (year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)
+  }
+
+  const min = function (arr) {
+    let output = arr[0]
+
+    for (const value of arr) {
+      if (output > value) {
+        output = value
+      }
+    }
+    return output
+  }
+
+  const max = function (arr) {
+    let output = arr[0]
+
+    for (const value of arr) {
+      if (output < value) {
+        output = value
+      }
+    }
+    return output
+  }
+</script>
