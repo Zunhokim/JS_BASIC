@@ -1,0 +1,28 @@
+<script>
+  // ex1.
+  const rightTriangle = function(a, b, c) {
+    const arr = [a, b, c] // 변수로 받아온 세 변의 길이를 배열에 저장. 
+    let maxnum = 0; // 제일 긴 변의 길이를 저장할 변수 선언
+
+    for(const value of arr) { // 삼각형 세 변의 크기 중, 제일 긴 변 확인
+      if (maxnum < value) {
+        maxnum = value
+      }
+    }
+    arr.indexOf(maxnum) // 직각삼각형의 공식 적용을 위해, 제일 긴 변을 배열에서 제거
+
+    if (maxnum**2 === arr[0]**2 + arr[1]**2) { // 직각삼각형 판별 공식 적용
+      return true // 직각삼각형일 경우 true로 return.
+    } else {
+      return false // 그 외의 경우에는 false로 return.
+    }
+  }
+</script>
+
+<!--
+  나머지 매개변수
+  const name = function (...매개변수) {} >>>>> 자료형이 무조건 배열로 들어옴. 
+
+  전개 연산자. 
+  함수(...배열)
+-->
