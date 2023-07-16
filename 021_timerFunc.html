@@ -1,0 +1,14 @@
+<script>
+  const a = setTimeout(function() { // 특정한 시간 후에 한번
+    console.log("HI, TimeOut")
+  }, 1000) 
+  const b = setInterval(function() { // 특정 시간마다 한번
+    console.log("HI, Interval")
+  }, 1000)
+  
+  console.log(a, b)
+
+  clearTimeout(a)
+  clearInterval(b)
+
+</script>
