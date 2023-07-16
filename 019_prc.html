@@ -1,0 +1,50 @@
+<script>
+  const multiplyAll = function(a, b) {
+    let result = 1;
+
+    for(let i = a; i <= b; i++) {
+      result *= i;
+    }
+
+    return result;
+  }
+
+  console.log(multiplyAll(1, 2))
+  console.log(multiplyAll(1, 3))
+
+  const max = function(ele, ...etc) {
+    if(Array.isArray(ele)) {
+      let output = ele[0];
+      for(const data of ele) {
+        if(output < data) {
+          output = data;
+        }
+      }
+      return output;
+    } else {
+      let output = ele;
+      for(const data of etc) {
+        if (output < data) {
+          output = data;
+        }
+      }
+      return output;
+    }
+  }
+
+  console.log(max(1,2,3,4))
+  console.log(max([1,2,3,4]))
+
+  const max2 = function() {
+    let output = arguments[0];
+
+    for (let i = 0; i < arguments.length; i++) {
+      const data = arguments[i];
+
+      if(output < data) {
+        output = data
+      }
+    }
+    return output
+  }
+</script>
