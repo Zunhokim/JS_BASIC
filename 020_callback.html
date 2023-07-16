@@ -1,0 +1,43 @@
+<script>
+  const test = function () {
+    a()
+  }
+
+  const func = function () {
+    console.log("HI")
+  }
+
+  test(func)
+
+  // 위처럼, 함수 내에 함수가 들어갈 것이 확실할 때, 상위 함수로 입력되는 함수를 콜백함수라 함. 
+
+  const test2 = function(arr, cb) {
+    for(const data of arr) {
+      cb(data)
+    }
+  }
+
+  const func2 = function(ele) {
+    console.log(`${ele}`)
+  }
+
+  test2([52, 273, 103, 32], func2)
+
+  const myForEach = function (arr, cb) {
+    for (let i = 0; i < arr.length; i++) {
+      const ele = arr[i];
+      cb(ele, i, arr)
+    }
+  }
+
+  const myFilter = function (arr, cb) {
+    let output = []
+    for (let i = 0; i < arr.length; i++) {
+      const ele = arr[i];
+      if (cb(ele, i, arr)) {
+        ouput.push(ele)
+      }
+    }
+    return output
+  }
+</script>
