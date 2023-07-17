@@ -1,0 +1,25 @@
+<script>
+  const a = 123.456789
+
+  console.log(a.toFixed(0)) // n번째 자리까지 반올림하여 출력, 123
+  console.log(a.toFixed(1)) // n번째 자리까지 반올림하여 출력, 123.5
+
+  const b = Number("HI")
+
+  console.log(Number.isNaN(b)) // NaN인 입력값이 들어갈 경우 true를 출력. 
+
+  //is____ 메서드는 대체로 true 또는 false의 boolean 자료형을 리턴함. 
+  //.trim() : 앞뒤 공백을 제거하는 메서드
+
+  //split() : 문자열을 슬라이싱 하여 데이터를 입력받는 메서드, () 안에 슬라이싱의 기준이 될 문자를 입력. 
+    // ex. "123, 456, 789, 012".split(",")
+    // result. ["123", "456", "789", "012"]
+
+  console.log(Math.floor(10.1999)) // 내림 처리를 하는 메서드
+  console.log(Math.ceil(10.109)) // 올림 처리를 하는 매서드
+  console.log(Math.round(10.3)) // 반올림 처리를 하는 메서드
+  console.log(Math.max(123,456,789)) // 최댓값을 찾는 메서드
+  console.log(Math.min(123,456,789)) // 최솟값을 찾는 메서드
+  console.log(Math.random() * 1) // 난수 생성
+
+</script>
