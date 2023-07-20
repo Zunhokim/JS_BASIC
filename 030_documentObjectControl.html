@@ -20,6 +20,16 @@
       const img = document.querySelector('img')
       img.setAttribute('src', 'http://placekitten.com/200/200') // 값을 넣는 명령어
       console.log(img.getAttribute('src'))
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const divs = document.querySelectorAll('div')
+        divs.forEach((div, key) => {
+          console.log(key)
+          div.style.backgroundColor = `rgb(${key * 10},${key * 10},${key * 10})`
+          div.style.height = '10px'
+          div.style['background-color']
+        })
+      })
     })
   </script>
 </head>
@@ -28,5 +38,16 @@
   <h1 id="innerHTML">innerHTML 속성 기존 문자열</h1>
 
   <img src="" alt="">
+
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
 </body>
 </html>
